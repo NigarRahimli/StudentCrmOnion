@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "l4xSacAc3EI0vE6vpHkSL67r3b88coTjkDkKSfrzYe0=",
+  "Source": "StudentCrm.WebApi",
+  "BasePath": "_content/StudentCrm.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
