@@ -8,7 +8,6 @@ namespace StudentCrm.Application.DTOs.EmployeeDTOs
 {
     public class EmployeeUpdateDTO
     {
-        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime StartWork { get; set; }

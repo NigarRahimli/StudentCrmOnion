@@ -11,7 +11,7 @@ namespace StudentCrm.Application.Abstraction
 {
     public interface IAttendanceService
     {
-        public Task<Result> CreateAttendance(AttendanceCreateDTO eventCreateDTO);
-        List<AttendanceDTO> GetEvents();
+        public Task<Result> CreateAttendance(UserAttendanceCreateDTO eventCreateDTO);
+        List<UserAttendanceDTO> GetEvents();
     }
 }

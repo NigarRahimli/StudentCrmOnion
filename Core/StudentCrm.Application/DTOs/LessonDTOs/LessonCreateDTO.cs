@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace StudentCrm.Application.DTOs.LessonDTOs
 {
-    internal class LessonCreateDTO
+    public class LessonCreateDTO
     {
+        public string LessonName { get; set; }
+        public string Description { get; set; }
+        public List<int> Days { get; set; }
     }
 }

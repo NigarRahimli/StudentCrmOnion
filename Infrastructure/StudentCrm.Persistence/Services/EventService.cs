@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation;
 using StudentCrm.Application.Abstraction;
+using StudentCrm.Application.Attributes;
 using StudentCrm.Application.DTOs.EventDTOs;
 using StudentCrm.Application.Exceptions.EventException;
 using StudentCrm.Application.Repositories;
@@ -29,7 +30,7 @@ namespace StudentCrm.Persistence.Services
             _eventValidator = eventValidator;
         }
 
-
+        [Test("nese")]
         public async Task<Result> CreateEvent(EventCreateDTO eventCreateDTO)
         {
             var validation= _eventValidator.Validate(eventCreateDTO);

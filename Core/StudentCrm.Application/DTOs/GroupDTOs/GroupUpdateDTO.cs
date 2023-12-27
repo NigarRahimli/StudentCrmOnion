@@ -8,7 +8,6 @@ namespace StudentCrm.Application.DTOs.GroupDTOs
 {
     public class GroupUpdateDTO
     {
-        public int Id { get; set; }
         public string GroupNumber { get; set; }
         public bool IsActive { get; set; }
     }

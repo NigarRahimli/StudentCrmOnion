@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace StudentCrm.Application.DTOs.InternshipDTOs
 {
-    public class InternshipUpdateDTO_
+    public class InternshipUpdateDTO
     {
-        public int Id { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int SupervisorID { get; set; }

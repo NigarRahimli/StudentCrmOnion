@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentCrm.Application.DTOs.AttendanceDTOs
 {
-    public class AttendanceUpdateDTO
+    public class UserAttendanceUpdateDTO
     {
         public int UserId { get; set; }
         public DateTime LessonDate { get; set; }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace StudentCrm.Application.DTOs.MeetingDTOs
 {
-    internal class MeetingCreateDTO
+    public class MeetingCreateDTO
     {
+        public string Title { get; set; }
+        public DateTime MeetingDate { get; set; }
     }
 }
