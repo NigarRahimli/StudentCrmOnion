@@ -1,5 +1,6 @@
 ﻿using StudentCrm.Application.DTOs.EventDTOs;
 using StudentCrm.Application.Responses;
+using StudentCrm.Application.Responses.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,10 @@ namespace StudentCrm.Application.Abstraction
 {
     public interface IEventService
     {
-        public Task<Result> CreateEvent(EventCreateDTO eventCreateDTO); 
-        List<EventDTO> GetEvents();
+        Task<IResult> CreateEvent(EventCreateDTO eventCreateDTO); 
+        public List<EventDTO> GetEvents();
+        //public List<EventDTO> GetEventsByCondition();
+        //List<EventDTO> GetEventsBySingle();
+
     }
 }

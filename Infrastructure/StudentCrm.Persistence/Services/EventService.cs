@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using FluentValidation;
+using IdentityService.Core.Utilities.Results.Concrete.ErrorResults;
+using IdentityService.Core.Utilities.Results.Concrete.SuccessResults;
 using StudentCrm.Application.Abstraction;
 using StudentCrm.Application.Attributes;
 using StudentCrm.Application.DTOs.EventDTOs;
@@ -7,6 +9,7 @@ using StudentCrm.Application.Exceptions.EventException;
 using StudentCrm.Application.Repositories;
 using StudentCrm.Application.Repositories.Event;
 using StudentCrm.Application.Responses;
+using StudentCrm.Application.Responses.Abstract;
 using StudentCrm.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -31,17 +34,17 @@ namespace StudentCrm.Persistence.Services
         }
 
         [Test("nese")]
-        public async Task<Result> CreateEvent(EventCreateDTO eventCreateDTO)
+        public async Task<IResult> CreateEvent(EventCreateDTO eventCreateDTO)
         {
             var validation= _eventValidator.Validate(eventCreateDTO);
             if (!validation.IsValid)
             {
-                return new Result(false, validation.Errors.Select(x=>x.ErrorMessage).ToList());
+                return new ErrorResult( validation.Errors.Select(x=>x.ErrorMessage).ToList().ToString());
             }
             var newEvent = _mapper.Map<Event>(eventCreateDTO);
             _writeRepository.AddAsync(newEvent);
             var res = await _writeRepository.SaveAsync();
-            return new Result(true,"Elave olundu");
+            return new SuccessResult("Elave olundu");
             
         }
 

@@ -12,7 +12,8 @@ namespace StudentCrm.Application.Validations.ExpenceValidations
     {
         public RegisterExpenseValidation()
         {
-            
+            RuleFor(x=>x.Note).NotEmpty().MinimumLength(3).MaximumLength(6).WithMessage("3den asagi olmamalidir")/*.Must(x=>x.ToString()=="a")*/;
+
         }
     }
 }

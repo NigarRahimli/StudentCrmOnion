@@ -1,6 +1,7 @@
 ﻿
 using StudentCrm.Application.DTOs.ExpenseDTOs;
 using StudentCrm.Application.Responses;
+using StudentCrm.Application.Responses.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace StudentCrm.Application.Abstraction
 {
     public interface IExpenseService
     {
-        public Task<Result> CreateAttendance(ExpenseCreateDTO eventCreateDTO);
+        Task <IResult> CreateAttendance(ExpenseCreateDTO eventCreateDTO);
         List<ExpenseDTO> GetEvents();
     }
 }
