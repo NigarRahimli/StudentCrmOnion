@@ -12,6 +12,6 @@ public class Student : BaseEntity
     public Group Group { get; set; }
 
     public int AttendanceId { get; set; }
-    public Attendance Attendance { get; set; }
+    public UserAttendance Attendance { get; set; }
 
 }

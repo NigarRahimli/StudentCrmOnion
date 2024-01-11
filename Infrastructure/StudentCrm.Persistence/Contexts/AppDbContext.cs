@@ -15,7 +15,6 @@ namespace StudentCrm.Persistence.Contexts
         {           
         }
         public DbSet<Event> Events { get; set; }
-        public DbSet<Attendance>Attendances { get; set; }
         public DbSet<Expense>Expenses { get; set; }
         public DbSet<ExpenseType>ExpenseTypes { get; set; }
         public DbSet<Employee>Employees { get; set; }
@@ -33,6 +32,8 @@ namespace StudentCrm.Persistence.Contexts
         public DbSet<StudentPayment>StudentPayments { get; set; }
         public DbSet<StudentCrm.Domain.Entities.Task> Tasks { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<UserAttendance>UserAttendances { get; set; }
+        public DbSet<UserPosition> UserPositions { get; set; }
 
         public override int SaveChanges()
         {

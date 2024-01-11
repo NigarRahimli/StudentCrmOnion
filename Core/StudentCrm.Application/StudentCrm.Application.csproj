@@ -22,8 +22,4 @@
     <ProjectReference Include="..\StudentCrm.Domain\StudentCrm.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTOs\UserPositionDTOs\" />
-  </ItemGroup>
-
 </Project>
