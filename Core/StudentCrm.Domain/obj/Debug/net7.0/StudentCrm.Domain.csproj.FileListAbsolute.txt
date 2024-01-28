@@ -1,4 +1,3 @@
-C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\StudentCrm.Domain.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\StudentCrm.Domain.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\StudentCrm.Domain.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\StudentCrm.Domain.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\Stud
 C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\refint\StudentCrm.Domain.dll
 C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\StudentCrm.Domain.pdb
 C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\ref\StudentCrm.Domain.dll
+C:\Users\User\Desktop\c#\StudentCrm\Core\StudentCrm.Domain\obj\Debug\net7.0\StudentCrm.Domain.sourcelink.json

@@ -51,3 +51,4 @@ C:\Users\User\Desktop\c#\StudentCrm\Presentation\StudentCrm.WebApi\bin\Debug\net
 C:\Users\User\Desktop\c#\StudentCrm\Presentation\StudentCrm.WebApi\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\User\Desktop\c#\StudentCrm\Presentation\StudentCrm.WebApi\bin\Debug\net7.0\FluentValidation.dll
 C:\Users\User\Desktop\c#\StudentCrm\Presentation\StudentCrm.WebApi\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\User\Desktop\c#\StudentCrm\Presentation\StudentCrm.WebApi\obj\Debug\net7.0\StudentCrm.WebApi.sourcelink.json

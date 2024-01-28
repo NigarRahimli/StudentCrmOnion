@@ -8,7 +8,9 @@ namespace StudentCrm.Application.DTOs.EventDTOs
 {
     public class EventDTO
     {
-        int Id { get; set; }
-        public int Title { get; set; }
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Location { get; set; }
+        public string Organizator { get; set; }
     }
 }

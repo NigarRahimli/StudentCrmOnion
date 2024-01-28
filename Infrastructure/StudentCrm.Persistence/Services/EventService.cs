@@ -2,6 +2,7 @@
 using FluentValidation;
 using IdentityService.Core.Utilities.Results.Concrete.ErrorResults;
 using IdentityService.Core.Utilities.Results.Concrete.SuccessResults;
+using Microsoft.Extensions.Logging;
 using StudentCrm.Application.Abstraction;
 using StudentCrm.Application.Attributes;
 using StudentCrm.Application.DTOs.EventDTOs;
@@ -14,6 +15,7 @@ using StudentCrm.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -33,7 +35,7 @@ namespace StudentCrm.Persistence.Services
             _eventValidator = eventValidator;
         }
 
-        [Test("nese")]
+        [Test("createEvent")]
         public async Task<IResult> CreateEvent(EventCreateDTO eventCreateDTO)
         {
             var validation= _eventValidator.Validate(eventCreateDTO);
@@ -43,18 +45,44 @@ namespace StudentCrm.Persistence.Services
             }
             var newEvent = _mapper.Map<Event>(eventCreateDTO);
             _writeRepository.AddAsync(newEvent);
+            //problem
             var res = await _writeRepository.SaveAsync();
+            //
             return new SuccessResult("Elave olundu");
             
         }
 
-        public List<EventDTO> GetEvents()
+        public async Task<IResult> DeleteEvent(int id)
+        {      
+            await _writeRepository.RemoveAsync(id);
+            await _writeRepository.SaveAsync();
+            return new SuccessResult();
+        }
+
+        public IDataResult<EventDTO> GetEventById(int id)
+        {
+            var findEvent = _readRepository.GetWhere(x=>x.Id==id).FirstOrDefault();
+            if (findEvent is null) throw new EventNotFoundException();
+            var mapToEventList = _mapper.Map<EventDTO>(findEvent);
+            return new SuccessDataResult<EventDTO>(mapToEventList);
+
+        }
+
+        public IDataResult<List<EventDTO>> GetEvents()
         {
             var events = _readRepository.GetAll();
-            if (!events.Any()) throw new EventNotFoundException();
-            var map = _mapper.Map <List<EventDTO>>(events);
-            return map;
-            
+            if (!events.Any()) throw new EventNotFoundException();   
+            var mapToEventList = _mapper.Map<List<EventDTO>>(events);   
+            return new SuccessDataResult<List<EventDTO>>(mapToEventList);
+        }
+
+        public async Task<IResult>UpdateEvent(int id, EventUpdateDTO eventUpdateDTO)
+        {
+            var findEvent = await _readRepository.GetByIdAsync(id);
+            var mapToEvent = _mapper.Map<EventUpdateDTO>(findEvent);
+            await _writeRepository.SaveAsync();
+            return new SuccessResult();
+
         }
     }
 }

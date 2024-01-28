@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SH3XyynVSa+/JZvs8J/xHZSh4itkKIUeSAw95G3zeCh6x22XXemxx0I+RIve3zt1jQjgCiSSVK7Yr2s23UQ7EQ==",
+  "dgSpecHash": "FJN/bYGpcRo/FxODJA+yH1NhClmBHByFa8Z0qEsXKC8mnVFvfoC1yiML00+794KfF1gc1n1c9S2KyTFyu4y0JQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\User\\Desktop\\c#\\StudentCrm\\Infrastructure\\StudentCrm.Persistence\\StudentCrm.Persistence.csproj",
   "expectedPackageFiles": [

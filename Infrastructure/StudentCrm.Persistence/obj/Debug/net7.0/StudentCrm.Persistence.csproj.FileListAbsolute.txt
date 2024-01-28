@@ -17,3 +17,4 @@ C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Persistence\bin\De
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Persistence\bin\Debug\net7.0\StudentCrm.Domain.pdb
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Persistence\obj\Debug\net7.0\StudentCrm.Persistence.csproj.CopyComplete
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Persistence\obj\Debug\net7.0\StudentCrm.Persistence.genruntimeconfig.cache
+C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Persistence\obj\Debug\net7.0\StudentCrm.Persistence.sourcelink.json

@@ -1,7 +1,6 @@
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\bin\Debug\net7.0\StudentCrm.Infrastructure.deps.json
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\bin\Debug\net7.0\StudentCrm.Infrastructure.dll
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\bin\Debug\net7.0\StudentCrm.Infrastructure.pdb
-C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj\Debug\net7.0\StudentCrm.Infrastructure.csproj.AssemblyReference.cache
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj\Debug\net7.0\StudentCrm.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj\Debug\net7.0\StudentCrm.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj\Debug\net7.0\StudentCrm.Infrastructure.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj\Debug\net7.0\refint\StudentCrm.Infrastructure.dll
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj\Debug\net7.0\StudentCrm.Infrastructure.pdb
 C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj\Debug\net7.0\ref\StudentCrm.Infrastructure.dll
+C:\Users\User\Desktop\c#\StudentCrm\Infrastructure\StudentCrm.Infrastructure\obj\Debug\net7.0\StudentCrm.Infrastructure.sourcelink.json

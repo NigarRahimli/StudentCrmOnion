@@ -35,7 +35,7 @@ namespace StudentCrm.Persistence.Repositories
 
         public async Task<bool> RemoveAsync(int id)
         {
-
+#warning problem
             T model = await Table.FirstOrDefaultAsync(data=>data.Id==id);
             return Remove(model);
         }

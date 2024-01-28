@@ -14,6 +14,8 @@ namespace StudentCrm.Application.AutoMapper
         public MappingProfile()
         {
             CreateMap<Event,EventCreateDTO>().ReverseMap();
+            CreateMap<Event,EventDTO>().ReverseMap();
+            CreateMap<Event,EventUpdateDTO>().ReverseMap();
 
         }
 

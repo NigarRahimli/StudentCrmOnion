@@ -17,15 +17,34 @@ namespace StudentCrm.WebApi.Controllers
         }
 
         [HttpPost("create")]
-        public IActionResult CreateEvent([FromBody] EventCreateDTO eventCreateDTO)
+        public async Task<IActionResult> CreateEvent([FromBody] EventCreateDTO eventCreateDTO)
         {
-            var res=_eventService.CreateEvent(eventCreateDTO);
+            var res = await _eventService.CreateEvent(eventCreateDTO);
             return Ok(res);
         }
-        [HttpGet("events")]
+        [HttpPut("update/{id}")]
+        public IActionResult Update(int id, [FromBody] EventUpdateDTO eventUpdate)
+        {
+            var res = _eventService.UpdateEvent(id, eventUpdate);
+            return Ok(res);
+        }
+        [HttpDelete("delete/{id}")]
+        public IActionResult Delete(int id)
+        {
+            var result = _eventService.DeleteEvent(id);
+            return Ok(result);
+        }
+
+        [HttpGet("getallevents")]
         public IActionResult GetAllEvents()
         {
             var res = _eventService.GetEvents();
+            return Ok(res);
+        }
+        [HttpGet("geteventbyid")]
+        public IActionResult GetEventById(int id)
+        {
+            var res = _eventService.GetEventById(id);
             return Ok(res);
         }
     }

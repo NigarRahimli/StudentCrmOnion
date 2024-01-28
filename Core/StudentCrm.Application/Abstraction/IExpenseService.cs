@@ -12,7 +12,7 @@ namespace StudentCrm.Application.Abstraction
 {
     public interface IExpenseService
     {
-        Task <IResult> CreateAttendance(ExpenseCreateDTO eventCreateDTO);
+        Task <IResult> CreateAttendance(ExpenseCreateDTO expenseCreateDTO);
         List<ExpenseDTO> GetEvents();
     }
 }
