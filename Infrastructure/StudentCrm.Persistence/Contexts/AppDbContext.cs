@@ -47,7 +47,7 @@ namespace StudentCrm.Persistence.Contexts
                         data.Entity.CreatedDate = DateTime.Now;
                         break;
                     case EntityState.Modified:
-                        data.Entity.CreatedDate = DateTime.Now;
+                        data.Entity.UpdatedDate = DateTime.Now;
                         break;
                     default:
                         data.Entity.CreatedDate = DateTime.Now;

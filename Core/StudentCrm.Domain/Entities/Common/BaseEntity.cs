@@ -8,4 +8,5 @@ public class BaseEntity
     public DateTime UpdatedDate { get; set; }
 
 
+
 }

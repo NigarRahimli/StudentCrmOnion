@@ -44,10 +44,10 @@ namespace StudentCrm.Persistence.Services
                 return new ErrorResult( validation.Errors.Select(x=>x.ErrorMessage).ToList().ToString());
             }
             var newEvent = _mapper.Map<Event>(eventCreateDTO);
-            _writeRepository.AddAsync(newEvent);
-            //problem
+            await _writeRepository.AddAsync(newEvent);
+        
             var res = await _writeRepository.SaveAsync();
-            //
+            
             return new SuccessResult("Elave olundu");
             
         }
@@ -76,13 +76,23 @@ namespace StudentCrm.Persistence.Services
             return new SuccessDataResult<List<EventDTO>>(mapToEventList);
         }
 
-        public async Task<IResult>UpdateEvent(int id, EventUpdateDTO eventUpdateDTO)
+        public async Task<IResult> UpdateEvent(int id, EventUpdateDTO eventUpdateDTO)
         {
             var findEvent = await _readRepository.GetByIdAsync(id);
-            var mapToEvent = _mapper.Map<EventUpdateDTO>(findEvent);
-            await _writeRepository.SaveAsync();
-            return new SuccessResult();
 
+            if (findEvent == null)
+            {
+                throw new EventNotFoundException();
+            }
+
+            _mapper.Map(eventUpdateDTO, findEvent);
+
+            _writeRepository.Update(findEvent);
+            await _writeRepository.SaveAsync();
+
+            return new SuccessResult();
         }
+
+
     }
 }

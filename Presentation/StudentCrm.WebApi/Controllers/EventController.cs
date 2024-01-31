@@ -23,9 +23,9 @@ namespace StudentCrm.WebApi.Controllers
             return Ok(res);
         }
         [HttpPut("update/{id}")]
-        public IActionResult Update(int id, [FromBody] EventUpdateDTO eventUpdate)
+        public async Task<IActionResult> Update(int id, [FromBody] EventUpdateDTO eventUpdate)
         {
-            var res = _eventService.UpdateEvent(id, eventUpdate);
+            var res =await  _eventService.UpdateEvent(id, eventUpdate);
             return Ok(res);
         }
         [HttpDelete("delete/{id}")]
@@ -41,7 +41,7 @@ namespace StudentCrm.WebApi.Controllers
             var res = _eventService.GetEvents();
             return Ok(res);
         }
-        [HttpGet("geteventbyid")]
+        [HttpGet("geteventbyid/{id}")]
         public IActionResult GetEventById(int id)
         {
             var res = _eventService.GetEventById(id);
